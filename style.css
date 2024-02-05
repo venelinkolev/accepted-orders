@@ -1,1 +1,15 @@
-.wrapper {}
+.wrapper {
+    margin: 1rem auto;
+    width: 600px;
+    background-color: var(--secondary-background);
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+}
+
+.main {
+    width: 100%;
+    padding: 1rem 0.5rem;
+    background-color: blueviolet;
+}
+
+.logo {}
