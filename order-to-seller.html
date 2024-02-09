@@ -42,20 +42,58 @@
         style="margin: 0 auto; width: 600px; background-color: var(--secondary-background);box-shadow: 0 0 0.5rem 0 rgb(0, 0, 0, 0.5); padding: 1rem; border-radius: 0.5rem;">
         <table align="center" style="width: 100%; color: var(--primary-text-color);">
             <tbody>
+                <!-- Header -->
                 <tr>
                     <td style="text-align: center; font-size: 1.6rem; font-weight: 700;">
                         <p>Нова регистрирана поръчка</p>
                     </td>
                 </tr>
+                <!-- Order Number And Date -->
+                <tr>
+                    <td>
+                        <table align="center" style="width: 100%; padding: 0 1rem;">
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        Поръчка №:
+                                    </td>
+                                    <td style="text-align: right;">Дата:</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left; font-size: 1.2rem; font-weight: 700;">
+                                        25665651457
+                                    </td>
+                                    <td style="text-align: right; font-size: 1.2rem; font-weight: 700;">09.02.2024 г.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Peyment Method -->
+                <tr>
+                    <table align="center"
+                        style="width: 100%;border-radius: 0.5rem; padding: 0.5rem 1rem; margin: 0.5rem 0; background-color: var(--main-background-color); ">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: left; font-weight: 700;">Начин на плащане:</td>
+                                <td style="text-align: right;font-weight: 700;">Наложен платеж</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </tr>
+                <!-- Line -->
                 <tr>
                     <td colspan="2" style="background-color: var(--main-background-color); padding: 2px 0;">
                     </td>
                 </tr>
+                <!-- Info -->
                 <tr>
                     <td>
                         <table align="center"
                             style="width: 100%; background-color: var(--main-background-color); margin: 1rem 0; border-radius: 0.5rem; padding: 1.2rem 1rem;">
                             <tbody>
+                                <!-- User -->
                                 <tr>
                                     <td
                                         style="font-size: 1.2rem; font-weight: 700; border-bottom: 1px solid var(--secondary-button-background);">
@@ -115,10 +153,11 @@
                                         </table>
                                     </td>
                                 </tr>
+                                <!-- Invoice Data -->
                                 <tr>
                                     <td
                                         style="font-size: 1.2rem; font-weight: 700; border-bottom: 1px solid var(--secondary-button-background); padding-top: 1rem;">
-                                        Клиент:
+                                        Данни за фактура:
                                     </td>
                                 </tr>
                                 <tr>
@@ -129,24 +168,49 @@
                                                 <tr>
                                                     <td
                                                         style="width: 50%; text-align: left; font-weight: 700; padding: 0.5rem 0;">
-                                                        Име:
+                                                        Фирма:
                                                     </td>
-                                                    <td style="text-align: right; font-style: italic;">Венелин</td>
+                                                    <td style="text-align: right; font-style: italic;">Сити Груп ЕООД
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: left; font-weight: 700; padding: 0.5rem 0;">
-                                                        Презиме:
+                                                        Булстат/ЕИК:
                                                     </td>
-                                                    <td style="text-align: right; font-style: italic;">Николов</td>
+                                                    <td style="text-align: right; font-style: italic;">BG123456789</td>
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: left; font-weight: 700; padding: 0.5rem 0;">
-                                                        Фамилия:
+                                                        Населено място(гр./с.):
                                                     </td>
-                                                    <td style="text-align: right; font-style: italic;">Колев</td>
+                                                    <td style="text-align: right; font-style: italic;">Несебър</td>
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: left; font-weight: 700; padding: 0.5rem 0;">
+                                                        Адрес:
+                                                    </td>
+                                                    <td style="text-align: right; font-style: italic;">ул. Любен
+                                                        Каравелов 24, ет. 5</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- Delivery Address -->
+                                <tr>
+                                    <td
+                                        style="font-size: 1.2rem; font-weight: 700; border-bottom: 1px solid var(--secondary-button-background); padding-top: 1rem;">
+                                        Адрес за доставка:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.5rem;">
+                                        <table
+                                            style="width: 100%; padding: 0.5rem; border: 1px solid var(--primary-background); border-radius: 0.5rem;">
+                                            <tbody>
+                                                <tr>
+                                                    <td
+                                                        style="width: 50%; text-align: left; font-weight: 700; padding: 0.5rem 0;">
                                                         Населено място(гр./с.):
                                                     </td>
                                                     <td style="text-align: right; font-style: italic;">Несебър</td>
@@ -160,6 +224,54 @@
                                                 <tr>
                                                     <td style="text-align: left; font-weight: 700; padding: 0.5rem 0;">
                                                         Адрес:
+                                                    </td>
+                                                    <td style="text-align: right; font-style: italic;">Кв. Черно море 1,
+                                                        номер 32, офис Янак Софт</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left; font-weight: 700; padding: 0.5rem 0;">
+                                                        Държава:
+                                                    </td>
+                                                    <td style="text-align: right; font-style: italic;">България</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- Courier -->
+                                <tr>
+                                    <td
+                                        style="font-size: 1.2rem; font-weight: 700; border-bottom: 1px solid var(--secondary-button-background); padding-top: 1rem;">
+                                        Куриер:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.5rem;">
+                                        <table
+                                            style="width: 100%; padding: 0.5rem; border: 1px solid var(--primary-background); border-radius: 0.5rem;">
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="2"
+                                                        style="text-align: center; font-weight: 700;font-size: 1.4rem; padding: 0.5rem 0;">
+                                                        Спиди
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td
+                                                        style="width: 50%;  text-align: left; font-weight: 700; padding: 0.5rem 0;">
+                                                        Населено място(гр./с.):
+                                                    </td>
+                                                    <td style="text-align: right; font-style: italic;">Несебър</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left; font-weight: 700; padding: 0.5rem 0;">
+                                                        Пощенски код:
+                                                    </td>
+                                                    <td style="text-align: right; font-style: italic;">8230</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left; font-weight: 700; padding: 0.5rem 0;">
+                                                        Адрес на офис:
                                                     </td>
                                                     <td style="text-align: right; font-style: italic;">Кв. Черно море 1,
                                                         номер 32, офис Янак Софт</td>
