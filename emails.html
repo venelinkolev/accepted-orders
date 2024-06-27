@@ -1,0 +1,1321 @@
+<!-- Съобщение за потвърждение на потребителска регистрация -->
+<!-- ------------------------------------------------------ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 16px/1.2 Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div
+        style="margin: 0 auto; width: 100%; max-width: 700px; box-sizing: border-box; background-color: <%= cssVars['emails-main-background-color'] %>;box-shadow: 0 0 0.5rem 0 rgb(0, 0, 0, 0.5); padding: 1rem; border-radius: 0.5rem; font: 16px/1.2 Verdana, Geneva, Tahoma, sans-serif;">
+        <table align="center" style="width: 100%;">
+            <tbody>
+                <tr>
+                    <table align="center"
+                        style="width: 100%; background-color: <%= cssVars['emails-secondary-background'] %>;"
+                        class="logo">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center; font-size: 2rem; font-weight: 700; padding: 1rem">
+                                    <%= site.getSettings().getSetting('shopName') %>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </tr>
+                <tr>
+                    <td>
+                        <table align="center"
+                            style="width: 100%; background-color: <%= cssVars['emails-main-background-color'] %>; color: <%= cssVars['emails-primary-text-color'] %>;">
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 0 1rem">
+                                        <p style="padding: 1rem 0">Здравейте,</p>
+                                        <p style="padding-bottom: 1rem">Получихме заявка за регистрация в сайта <%=
+                                                site.getSettings().getSetting('shopName') %>. </p>
+                                        <p style="padding-bottom: 1rem">Ако заявката е изпратена от Вас, моля, натиснете
+                                            долния линк, за да продължите регистрацията си:</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center;">
+                                        <a style="text-decoration: none; padding: 0.5rem 1.5rem; background-color: <%= cssVars['emails-primary-button-background'] %>; color: <%= cssVars['emails-primary-button-text-color'] %>; display: inline-block; border-radius: 0.5rem;"
+                                            target="_blank" href="<%= confirmationURL %>">Продължи регистрацията в
+                                            сайта</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="padding: 1rem;">
+                                        <p>Ако заявката не е изпратена от Вас, не е необходимо да предприемате никакви
+                                            действия.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table align="center"
+                                            style="width: 100%; background-color: <%= cssVars['emails-primary-background'] %>;color: <%= cssVars['emails-primary-button-text-color'] %>;">
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="3"
+                                                        style="text-align: center; padding: 1rem; font-size: 1.3rem;">
+                                                        Намери ни
+                                                        на</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 33%; text-align: right;">
+                                                        <a href="https://yanaksoft.com" target="_blank">
+                                                            <img style="display: block; width: 32px; height=30px;"
+                                                                src="https://<%= site.getHostname().replace("
+                                                                .api.", "." ) %>/assets/img/emails/globe-filled.png"
+                                                            alt="Yanaksoft-Site">
+                                                        </a>
+                                                    </td>
+                                                    <td style="width: 33%; text-align: center;">
+                                                        <a href="https://www.facebook.com/yanaksoft/" target="_blank">
+                                                            <img style="display: block; width: 30px; height=30px;"
+                                                                src="https://<%= site.getHostname().replace("
+                                                                .api.", "." ) %>/assets/img/emails/facebook.png"
+                                                            alt="Facebook">
+                                                        </a>
+                                                    </td>
+                                                    <td style="width: 33%; text-align: left;">
+                                                        <a href="https://www.youtube.com/channel/UChKJhsx-Asy6b_2ixKxzqGw"
+                                                            target="_blank">
+                                                            <img style="display: block; height=25px;"
+                                                                src="https://<%= site.getHostname().replace("
+                                                                .api.", "." ) %>/assets/img/emails/youtube.png"
+                                                            alt="Youtube">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr style="padding: 1rem;">
+                                                    <td colspan="3" style="text-align: center; padding: 1rem 0;">
+                                                        <strong>ЗАБЕЛЕЖКА:</strong> Това е автоматично генериран имейл,
+                                                        моля, не
+                                                        отговаряйте.
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+
+<!-- ----------------------------------------------------------- -->
+
+<!-- Съобщение за промяна на потребителска парола -->
+<!-- -------------------------------------------- -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 16px/1.2 Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div
+        style="margin: 0 auto; width: 100%; max-width: 700px; box-sizing: border-box; background-color: <%= cssVars['emails-main-background-color'] %>;box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.5); padding: 1rem; border-radius: 0.5rem;">
+        <table align="center" style="width: 100%;">
+            <tbody>
+                <tr>
+                    <table align="center"
+                        style="width: 100%; background-color: <%= cssVars['emails-secondary-background'] %>;"
+                        class="logo">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center; font-size: 2rem; font-weight: 700; padding: 1rem;">
+                                    <%= site.getSettings().getSetting('shopName') %>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </tr>
+                <tr>
+                    <td>
+                        <table align="center"
+                            style="width: 100%; background-color: <%= cssVars['emails-main-background-color'] %>; color: <%= cssVars['emails-primary-text-color'] %>;">
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 1rem;">
+                                        <p>Здравейте,</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1rem;">
+                                        <p>Получихме заявка за нулиране на вашата парола. Натиснете бутона по-долу за да
+                                            промените паролата си. </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center;">
+                                        <a style="text-decoration: none; padding: 0.5rem 1.5rem; background-color: <%= cssVars['emails-primary-button-background'] %>; color: <%= cssVars['emails-primary-button-text-color'] %>; display: inline-block; border-radius: 0.5rem;"
+                                            target="_blank" href="<%= passwordResetURL %>">Смяна на паролата</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1rem;">
+                                        <p><strong>Вие ли направихте тази заявка за нулиране на паролата?</strong><br>
+                                            Ако не сте заявили нулиране на паролата, може да игнорирате това съобщение.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table align="center"
+                            style="width: 100%; background-color: <%= cssVars['emails-primary-background'] %>;color: <%= cssVars['emails-primary-button-text-color'] %>;">
+                            <tbody>
+                                <tr>
+                                    <td colspan="3" style="text-align: center; padding: 1rem; font-size: 1.3rem;">Намери
+                                        ни
+                                        на</td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 33%; text-align: right;">
+                                        <a href="https://yanaksoft.com" target="_blank">
+                                            <img style="display: block; width: 32px; height=30px;"
+                                                src="https://<%= site.getHostname().replace(" .api.", "." )
+                                                %>/assets/img/emails/globe-filled.png" alt="Yanaksoft-Site">
+                                        </a>
+                                    </td>
+                                    <td style="width: 33%; text-align: center;">
+                                        <a href="https://www.facebook.com/yanaksoft/" target="_blank">
+                                            <img style="display: block; width: 30px; height=30px;"
+                                                src="https://<%= site.getHostname().replace(" .api.", "." )
+                                                %>/assets/img/emails/facebook.png" alt="Facebook">
+                                        </a>
+                                    </td>
+                                    <td style="width: 33%; text-align: left;">
+                                        <a href="https://www.youtube.com/channel/UChKJhsx-Asy6b_2ixKxzqGw"
+                                            target="_blank">
+                                            <img style="display: block; height=25px;"
+                                                src="https://<%= site.getHostname().replace(" .api.", "." )
+                                                %>/assets/img/emails/youtube.png" alt="Youtube">
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="padding: 1rem;">
+                                    <td colspan="3" style="text-align: center; padding: 1rem 0;">
+                                        <strong>ЗАБЕЛЕЖКА:</strong> Това е автоматично генериран имейл, моля, не
+                                        отговаряйте.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+
+<!-- --------------------------------------------------------- -->
+
+<!-- Съобщение за потвърждение на поръчка към клиента -->
+<!-- ------------------------------------------------ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 16px/1.2 Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div
+        style="margin: 0 auto; width: 100%; max-width: 700px; box-sizing: border-box; background-color: <%= cssVars['emails-secondary-background'] %>; padding: 10px; border-radius: 0.5rem; font: 16px/1.2 Verdana, Geneva, Tahoma, sans-serif;">
+        <table style="width: 100%;">
+            <tbody>
+                <tr>
+                    <table align="center" style="width: 100%;" class="logo">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center; font-size: 2rem; font-weight: 700; padding: 1rem;">
+                                    <%= site.getSettings().getSetting('shopName') %>
+                                </td>
+                            </tr>
+                            <!-- <tr>
+                                    <td colspan="2" style="height: 1px; background-color: <%= cssVars['emails-primary-background'] %>;">
+                                    </td>
+                                </tr> -->
+                        </tbody>
+                    </table>
+                </tr>
+                <tr>
+                    <table align="center" class="shopping-cart"
+                        style="width: 100%; background-color: white; border-radius: 0.5rem 0.5rem 0 0;">
+                        <tbody>
+                            <tr>
+                                <td align="center" style="padding: 1rem;">
+                                    <img style="display: block; width: 50%;"
+                                        src="https://<%= site.getHostname().replace(" .api.", "." )
+                                        %>/assets/img/emails/shopping-cart.png"
+                                    alt="Shopping_Cart">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="font-size:2.5rem;font-weight:bold;text-align:center;color: <%= cssVars['emails-primary-text-color'] %>;">
+                                    <p style="padding: 1rem;">Вашата поръчка се обработва</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 1px; background-color: <%= cssVars['emails-primary-background'] %>;">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </tr>
+                <tr>
+                    <table align="center"
+                        style="width: 100%; background-color: white; padding-top: 1rem;margin-bottom: 1rem;border-radius: 0 0 0.5rem 0.5rem; "
+                        class="welcome">
+                        <tbody
+                            style="color: <%= cssVars['emails-secondary-text-color'] %>; font-size: 0.8rem; font-style: italic;">
+                            <tr>
+                                <td>
+                                    <p style="padding: 1rem 1.5rem;">Здравейте,</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="padding: 1rem 1.5rem;">Благодарим Ви за доверието и направената поръчка в
+                                        нашия магазин.
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="padding: 1rem 1.5rem;">Вашата поръчка се обработва. В този мейл ще
+                                        намерите пълните
+                                        детайли относно поръчката.</p>
+                                </td>
+                            </tr>
+                            <!--<tr>
+                                                            <td style="padding: 0 1.5rem;">
+                                                                <p>Ще получите потвърждение за изпращане, веднага след като пратката напусне нашия
+                                                                    склад. Можете да проследите пакетите си в нашия <strong><a
+                                                                            style="text-decoration: none; color: <%= cssVars['emails-secondary-button-background'] %>;"
+                                                                            target="_blank" href="https://<%= site.getHostname() %>">сайт</a></strong>.</p>
+                                                            </td>
+                                                        </tr>-->
+                            <tr>
+                                <td>
+                                    <p style="padding: 1rem 1.5rem;">Ще се радваме да ни се доверите отново!</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="padding: 1rem 1.5rem;">С уважение,
+                                        <%= site.getSettings().getSetting('shopName') %>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </tr>
+                <tr>
+                    <table align="center"
+                        style="width: 100%; background-color: white; border-radius: 0.5rem; margin-bottom: 1rem;"
+                        class="order-details">
+                        <tbody>
+                            <tr>
+                                <td
+                                    style="text-align: center; color: <%= cssVars['emails-primary-text-color'] %>; font-weight: 700; padding-top: 1rem; border-bottom: 1px solid <%= cssVars['emails-primary-text-color'] %>">
+                                    <p style="font-size: 1.2rem; padding: 0.8rem 1.5rem;">Детайли за поръчката</p>
+                                </td>
+                            </tr>
+                            <tr style="margin-bottom: 2rem;">
+                                <td
+                                    style="padding: 0 1.5rem; text-align: start; color: <%= cssVars['emails-primary-text-color'] %>;">
+                                    <table style="width: 100%; text-align: left;">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <table style="width: 100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="font-weight: 700; padding-top: 1rem;">
+                                                                    Поръчка №:
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <%= order.getFBId() %>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="vertical-align: top;">
+                                                    <table style="width: 100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="font-weight: 700; padding-top: 1rem;"
+                                                                    colspan="2">
+                                                                    Данни за фактуриране:
+                                                                </td>
+                                                            </tr>
+                                                            <% if (order.getBillingCompanyName()===null) { %>
+                                                                <tr>
+                                                                    <td colspan="2">
+                                                                        Без фактура
+                                                                    </td>
+                                                                </tr>
+                                                                <% } else { %>
+                                                                    <tr>
+                                                                        <td
+                                                                            style="width: 50%; text-align: left; font-weight: 700; padding: 0.5rem 0;">
+                                                                            Фирма:
+                                                                        </td>
+                                                                        <td
+                                                                            style="text-align: left; font-style: italic;">
+                                                                            <%= order.getBillingCompanyName() %>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td
+                                                                            style="width: 50%; text-align: left; font-weight: 700; padding: 0.5rem 0;">
+                                                                            МОЛ:
+                                                                        </td>
+                                                                        <td
+                                                                            style="text-align: left; font-style: italic;">
+                                                                            <%= order.getBillingAccountablePerson() %>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td
+                                                                            style="text-align: left; font-weight: 700; padding: 0.5rem 0;">
+                                                                            Булстат/ЕИК:
+                                                                        </td>
+                                                                        <td
+                                                                            style="text-align: left; font-style: italic;">
+                                                                            <%= order.getBillingUIC() %>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td
+                                                                            style="text-align: left; font-weight: 700; padding: 0.5rem 0;">
+                                                                            ДДС:
+                                                                        </td>
+                                                                        <td
+                                                                            style="text-align: left; font-style: italic;">
+                                                                            <%= order.getBillingVAT() %>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td
+                                                                            style="text-align: left; font-weight: 700; padding: 0.5rem 0;">
+                                                                            Адрес:
+                                                                        </td>
+                                                                        <td
+                                                                            style="text-align: left; font-style: italic;">
+                                                                            <%= order.getBillingCompanyAddress() %>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <% } %>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="vertical-align: top;">
+                                                    <table style="width: 100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="font-weight: 700; padding-top: 1rem;"
+                                                                    colspan="2">
+                                                                    Данни за доставка:
+                                                                </td>
+                                                            </tr>
+
+                                                            <% if (order.getShippingMethod() !==null) { %>
+                                                                <tr>
+                                                                    <td colspan="2">
+                                                                        <%= order.getShippingMethod().getLabel() %>
+                                                                    </td>
+                                                                </tr>
+                                                                <% } %>
+
+                                                                    <tr>
+                                                                        <td colspan="2">
+                                                                            <%= order.getShippingPersonFullName() %>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2">
+                                                                            <%= order.getShippingPhone() %>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <% if (order.getShippingCourierOfficeCode()===null)
+                                                                        { %>
+                                                                        <tr>
+                                                                            <td colspan="2">
+                                                                                <%= order.getShippingCity() %>,
+                                                                                    <%= order.getShippingAddress() %>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <% } else { %>
+                                                                            <tr>
+                                                                                <td colspan="2">
+                                                                                    До офис на куриер:
+                                                                                    <%= order.getShippingCourierOfficeName()
+                                                                                        %>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <% } %>
+
+                                                                                <!-- custom fields (only shipping) -->
+                                                                                <% for (const fieldDefinition of
+                                                                                    order.getUsedCustomFieldDefititions())
+                                                                                    { %>
+                                                                                    <% if
+                                                                                        (fieldDefinition.getShowInOrderConfirmationEmailForCustomer()===1
+                                                                                        &&
+                                                                                        fieldDefinition.getKey().indexOf("_shipping_")>
+                                                                                        -1) { %>
+                                                                                        <tr>
+                                                                                            <td
+                                                                                                style="width: 50%; text-align: left; font-weight: 700; padding: 10px 0;">
+                                                                                                <%= fieldDefinition.getLabel()
+                                                                                                    %>:
+                                                                                            </td>
+                                                                                            <td
+                                                                                                style="width: 50%; text-align: left; padding: 10px 0;">
+                                                                                                <%= order.getCustomFieldHumanReadableValue(fieldDefinition.getKey())
+                                                                                                    %>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <% } %>
+                                                                                            <% } %>
+                                                                                                <!-- custom fields -->
+
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr style="margin-bottom: 2rem;">
+                                <td
+                                    style="padding: 0 1.5rem; text-align: start; color: <%= cssVars['emails-primary-text-color'] %>;">
+                                    <table style="width: 100%; text-align: left;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding-top: 1rem;">
+                                                    <table style="width: 100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="font-weight: 700;">
+                                                                    Начин на плащане:
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <%= order.getPaymentMethod().getLabel() %>
+                                                                </td>
+                                                            </tr>
+
+                                                            <% if (order.getOrderNote() !==null) { %>
+                                                                <tr>
+                                                                    <td style="font-weight: 700; padding-top: 1rem;">
+                                                                        Коментар към поръчката:
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <%= order.getOrderNote() %>
+                                                                    </td>
+                                                                </tr>
+                                                                <% } %>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr style="margin-bottom: 2rem;">
+                                <td
+                                    style="padding: 0 1.5rem; padding-bottom: 1rem; text-align: start; color: <%= cssVars['emails-primary-text-color'] %>;">
+                                    <table style="width: 100%">
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: 700; padding-top: 1rem;">Дата на поръчката:</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <%= order.getDateCreated().toLocaleString("bg-BG") %>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <!-- custom fields (except shipping)-->
+                            <% for (const fieldDefinition of order.getUsedCustomFieldDefititions()) { %>
+                                <% if (fieldDefinition.getShowInOrderConfirmationEmailForCustomer()===1 &&
+                                    fieldDefinition.getKey().indexOf("_shipping_")===-1) { %>
+                                    <tr style="margin-bottom: 2rem;">
+                                        <td
+                                            style="padding: 0 1.5rem; padding-bottom: 1rem; text-align: start; color: <%= cssVars['emails-primary-text-color'] %>;">
+                                            <table style="width: 100%">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="font-weight: 700;">
+                                                            <%= fieldDefinition.getLabel() %>:
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <%= order.getCustomFieldHumanReadableValue(fieldDefinition.getKey())
+                                                                %>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <% } %>
+                                        <% } %>
+                                            <!-- custom fields -->
+
+                        </tbody>
+                    </table>
+                </tr>
+                <tr>
+                    <table align="center"
+                        style="width: 100%; background-color: white; border-radius: 0.5rem; margin-bottom: 1rem; padding: 0 0.5rem; padding-bottom: 1.5rem; color: <%= cssVars['emails-primary-text-color'] %>;"
+                        class="order-total">
+                        <tbody>
+                            <tr>
+                                <td
+                                    style="padding: 1rem; text-align: start; color: <%= cssVars['emails-primary-text-color'] %>; font-weight: 700;">
+                                    <p style="font-size: 1.3rem;">Поръчка:</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0 1rem;">
+                                    <table style="width: 100%;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: left;">Име на продукта</td>
+                                                <td style="text-align: right;"><strong>Сума</strong> вкл. ДДС</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table style="width: 100%;">
+                                        <tbody>
+                                            <!-- Product Iteration  Start -->
+                                            <% for (const orderLineItem of order.getOrderLineItems()){ %>
+                                                <tr>
+                                                    <td
+                                                        style="padding: 1rem; border-top: 1px solid <%= cssVars['emails-primary-button-background'] %>; ">
+                                                        <table style="width: 100%;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="padding: 0 0.5rem;">
+                                                                        <table style="width: 100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td
+                                                                                        style="font-weight: 700; font-size: 1.2rem; line-height: 1.6rem;">
+                                                                                        <%= orderLineItem.getProductName()
+                                                                                            %>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td
+                                                                                        style="padding-top: 0.5rem; font-size: 0.8rem; font-style: italic; color: gray;">
+                                                                                        Артикулен номер: <%=
+                                                                                            orderLineItem.getFBStockId()
+                                                                                            %>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td
+                                                                        style="padding: 0 0.5rem; padding-top: 1rem; font-size: 1.2rem;">
+                                                                        <table style="width: 100%;">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td style="text-align: left;">
+                                                                                        <%= orderLineItem.getQuantity()
+                                                                                            %> x
+                                                                                            <%= orderLineItem.getSinglePriceGross()
+                                                                                                %>
+                                                                                                лв.
+                                                                                    </td>
+                                                                                    <td style="text-align: right;">
+                                                                                        <%= orderLineItem.getTotalPriceGross()
+                                                                                            %> лв.
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <% } %>
+                                                    <!-- Product Iteration  End -->
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="background-color: <%= cssVars['emails-primary-background'] %>; padding: 1rem; color: white;">
+                                    <table align="center" style="width: 100%; font-size: 1.2rem; padding: 0 0.5rem;">
+                                        <tbody>
+                                            <% if (order.getShippingPriceGross() !==null) { %>
+                                                <tr>
+                                                    <td style="text-align: left;"><strong>Цена за доставка:</td>
+                                                    <td style="text-align: right;"><strong>
+                                                            <%= order.getShippingPriceGross() %> лв.
+                                                        </strong></td>
+                                                </tr>
+                                                <% } %>
+                                                    <tr>
+                                                        <td style="text-align: left;"><strong>Обща цена</strong> вкл.
+                                                            ДДС</td>
+                                                        <td style="text-align: right;"><strong>
+                                                                <%= order.getTotalPriceGross() %> лв.
+                                                            </strong></td>
+                                                    </tr>
+                                                    <% if (order.getShippingPriceGross()===null) { %>
+                                                        <tr>
+                                                            <td colspa="2"
+                                                                style="font-size: 0.8rem; padding-top: 1rem;">* Цената
+                                                                за
+                                                                доставка се изчислява допълнително от куриера.</td>
+                                                        </tr>
+                                                        <% } %>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </tr>
+                <tr>
+                    <table
+                        style="width: 100%; background-color: white; border-radius: 0.5rem; text-align: center; color: <%= cssVars['emails-secondary-text-color'] %>; font-size: 1.2rem; font-weight: 700;"
+                        class="thenks">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 1rem;">
+                                    Благодарим Ви за поръчката!
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
+
+<!-- ----------------------------------------------------------- -->
+
+
+<!-- Съобщение за потвърждение на поръчка към търговеца -->
+<!-- -------------------------------------------------- -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 16px/1.2 Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div
+        style="margin: 0 auto; width: 100%; max-width: 700px; box-sizing: border-box; background-color: <%= cssVars['emails-secondary-background'] %>;box-shadow: 0 0 0.5rem 0 rgb(0, 0, 0, 0.5); padding: 10px; border-radius: 0.5rem; font: 16px/1.2 Verdana, Geneva, Tahoma, sans-serif;">
+        <table align="center" style="width: 100%; color: <%= cssVars['emails-primary-text-color'] %>;">
+            <tbody>
+                <!-- Header -->
+                <tr>
+                    <td style="text-align: center; font-size: 1.6rem; font-weight: 700; padding: 1.5rem">
+                        <p>Нова регистрирана поръчка</p>
+                    </td>
+                </tr>
+                <!-- Order Number And Date -->
+                <tr>
+                    <td>
+                        <table align="center" style="width: 100%;">
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: left; padding-left: 1.5rem;">
+                                        Поръчка №:
+                                    </td>
+                                    <td style="text-align: right; padding-right: 1.5rem;">Дата:</td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        style="text-align: left; font-size: 1.2rem; font-weight: 700; padding-left: 1.5rem;">
+                                        <%= order.getFBId() %>
+                                    </td>
+                                    <td
+                                        style="text-align: right; font-size: 1.2rem; font-weight: 700; padding-right: 1.5rem;">
+                                        <%= order.getDateCreated().toLocaleString("bg-BG") %>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Peyment Method -->
+                <tr>
+                    <td>
+                        <table align="center"
+                            style="width: 100%;border-radius: 0.5rem; margin: 1rem 0; background-color: <%= cssVars['emails-main-background-color'] %>; ">
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: left; font-weight: 700; padding: 0.5rem 1rem;">Начин на
+                                        плащане:</td>
+                                    <td style="text-align: right;font-weight: 700; padding: 0.5rem 1rem;">
+                                        <%= order.getPaymentMethod().getLabel() %>
+                                    </td>
+                                </tr>
+
+                                <% if (order.getOrderNote() !==null) { %>
+                                    <tr>
+                                        <td style="text-align: left; font-weight: 700; padding: 0.5rem 1rem;">Коментар
+                                            към поръчката:
+                                        </td>
+                                        <td style="text-align: right;font-weight: 700; padding: 0.5rem 1rem;">
+                                            <%= order.getOrderNote() %>
+                                        </td>
+                                    </tr>
+                                    <% } %>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- custom fields (except shipping) -->
+                <% for (const fieldDefinition of order.getUsedCustomFieldDefititions()) { %>
+                    <% if (fieldDefinition.getShowInOrderConfirmationEmailForCustomer()===1 &&
+                        fieldDefinition.getKey().indexOf("_shipping_")===-1) { %>
+
+                        <tr>
+                            <td>
+                                <table align="center"
+                                    style="width: 100%;border-radius: 0.5rem; margin: 1rem 0; background-color: <%= cssVars['emails-main-background-color'] %>; ">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: left; font-weight: 700; padding: 0.5rem 1rem;">
+                                                <%= fieldDefinition.getLabel() %>:
+                                            </td>
+                                            <td style="text-align: right;font-weight: 700; padding: 0.5rem 1rem;">
+                                                <%= order.getCustomFieldHumanReadableValue(fieldDefinition.getKey()) %>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <% } %>
+                            <% } %>
+                                <!-- custom fields -->
+
+
+                                <!-- Line -->
+                                <tr>
+                                    <td colspan="2"
+                                        style="background-color: <%= cssVars['emails-primary-background'] %>; padding: 2px 0;">
+                                    </td>
+                                </tr>
+                                <!-- Info -->
+                                <tr>
+                                    <td>
+                                        <table align="center"
+                                            style="width: 100%; background-color: <%= cssVars['emails-main-background-color'] %>; margin: 1rem 0; border-radius: 0.5rem;">
+                                            <tbody>
+                                                <!-- Invoice Data -->
+                                                <tr>
+                                                    <td
+                                                        style="font-size: 1.2rem; font-weight: 700; border-bottom: 1px solid <%= cssVars['emails-secondary-button-background'] %>; padding-top: 1rem; padding-bottom: 0.8rem; padding-left: 1rem;">
+                                                        Данни за фактура:
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 0.5rem;">
+                                                        <table align="center"
+                                                            style="width: 100%; padding: 0.5rem; background-color: <%= cssVars['emails-tertiary-background'] %>; border-radius: 0.5rem;">
+                                                            <tbody>
+                                                                <% if (order.getBillingCompanyName()===null) { %>
+                                                                    <tr>
+                                                                        <td colspan="2" style="padding: 0.8rem 1rem;">
+                                                                            Без фактура
+                                                                        </td>
+                                                                    </tr>
+                                                                    <% } else { %>
+                                                                        <tr>
+                                                                            <td
+                                                                                style="width: 50%; text-align: left; font-weight: 700; padding: 0.5rem 0; padding-left: 1rem;">
+                                                                                Фирма:
+                                                                            </td>
+                                                                            <td
+                                                                                style="text-align: right; font-style: italic; padding-right: 1rem;">
+                                                                                <%= order.getBillingCompanyName() %>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td
+                                                                                style="width: 50%; text-align: left; font-weight: 700; padding: 0.5rem 0; padding-left: 1rem;">
+                                                                                МОЛ:
+                                                                            </td>
+                                                                            <td
+                                                                                style="text-align: right; font-style: italic; padding-right: 1rem;">
+                                                                                <%= order.getBillingAccountablePerson()
+                                                                                    %>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td
+                                                                                style="text-align: left; font-weight: 700; padding: 0.5rem 0; padding-left: 1rem;">
+                                                                                Булстат/ЕИК:
+                                                                            </td>
+                                                                            <td
+                                                                                style="text-align: right; font-style: italic; padding-right: 1rem;">
+                                                                                <%= order.getBillingUIC() %>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td
+                                                                                style="text-align: left; font-weight: 700; padding: 0.5rem 0; padding-left: 1rem;">
+                                                                                ДДС:
+                                                                            </td>
+                                                                            <td
+                                                                                style="text-align: right; font-style: italic; padding-right: 1rem;">
+                                                                                <%= order.getBillingVAT() %>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td
+                                                                                style="text-align: left; font-weight: 700; padding: 0.5rem 0; padding-left: 1rem;">
+                                                                                Адрес:
+                                                                            </td>
+                                                                            <td
+                                                                                style="text-align: right; font-style: italic; padding-right: 1rem;">
+                                                                                <%= order.getBillingCompanyAddress() %>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <% } %>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                                <!-- Courier -->
+                                                <% if (order.getShippingMethod() !==null) { %>
+                                                    <tr>
+                                                        <td
+                                                            style="font-size: 1.2rem; font-weight: 700; border-bottom: 1px solid <%= cssVars['emails-secondary-button-background'] %>; padding-top: 1rem; padding-bottom: 0.8rem; padding-left: 1rem;">
+                                                            Данни за доставка:
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding: 0.5rem;">
+                                                            <table align="center"
+                                                                style="width: 100%; padding: 0.5rem; background-color: <%= cssVars['emails-tertiary-background'] %>; border-radius: 0.5rem;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td colspan="2"
+                                                                            style="text-align: left; font-weight: 700;font-size: 1.4rem; padding: 0.5rem 0; padding-left: 1rem;">
+                                                                            <%= order.getShippingMethod().getLabel() %>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <!-- custom fields (only shipping) -->
+                                                                    <% for (const fieldDefinition of
+                                                                        order.getUsedCustomFieldDefititions()) { %>
+                                                                        <% if
+                                                                            (fieldDefinition.getShowInOrderConfirmationEmailForCustomer()===1
+                                                                            &&
+                                                                            fieldDefinition.getKey().indexOf("_shipping_")>
+                                                                            -1) { %>
+                                                                            <tr>
+                                                                                <td
+                                                                                    style="width: 50%;  text-align: left; font-weight: 700; padding: 0.5rem 0; padding-left: 1rem;">
+                                                                                    <%= fieldDefinition.getLabel() %>:
+                                                                                </td>
+                                                                                <td
+                                                                                    style="text-align: right; font-style: italic;">
+                                                                                    <%= order.getCustomFieldHumanReadableValue(fieldDefinition.getKey())
+                                                                                        %>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <% } %>
+                                                                                <% } %>
+                                                                                    <!-- custom fields -->
+
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <% } %>
+
+                                                        <tr>
+                                                            <td
+                                                                style="font-size: 1.2rem; font-weight: 700; border-bottom: 1px solid <%= cssVars['emails-secondary-button-background'] %>; padding-top: 1rem; padding-bottom: 0.8rem; padding-left: 1rem;">
+                                                                Адрес за доставка:
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding: 0.5rem;">
+                                                                <table align="center"
+                                                                    style="width: 100%; padding: 0.5rem; background-color: <%= cssVars['emails-tertiary-background'] %>; border-radius: 0.5rem;">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td
+                                                                                style="text-align: left; font-weight: 700; padding: 0.5rem 0; padding-left: 1rem;">
+                                                                                Получател:
+                                                                            </td>
+                                                                            <td
+                                                                                style="text-align: right; font-style: italic; padding-right: 1rem;">
+                                                                                <%= order.getShippingPersonFullName() %>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td
+                                                                                style="text-align: left; font-weight: 700; padding: 0.5rem 0; padding-left: 1rem;">
+                                                                                Телефон:
+                                                                            </td>
+                                                                            <td
+                                                                                style="text-align: right; font-style: italic; padding-right: 1rem;">
+                                                                                <%= order.getShippingPhone() %>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                        <% if
+                                                                            (order.getShippingCourierOfficeCode()===null)
+                                                                            { %>
+                                                                            <tr>
+                                                                                <td
+                                                                                    style="width: 50%; text-align: left; font-weight: 700; padding: 0.5rem 0; padding-left: 1rem;">
+                                                                                    Населено място(гр./с.):
+                                                                                </td>
+                                                                                <td
+                                                                                    style="text-align: right; font-style: italic; padding-right: 1rem;">
+                                                                                    <%= order.getShippingCity() %>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td
+                                                                                    style="text-align: left; font-weight: 700; padding: 0.5rem 0; padding-left: 1rem;">
+                                                                                    Адрес:
+                                                                                </td>
+                                                                                <td
+                                                                                    style="text-align: right; font-style: italic; padding-right: 1rem;">
+                                                                                    <%= order.getShippingAddress() %>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <% } else { %>
+                                                                                <tr>
+                                                                                    <td
+                                                                                        style="width: 50%; text-align: left; font-weight: 700; padding: 0.5rem 0; padding-left: 1rem;">
+                                                                                        До офис на куриер:
+                                                                                    </td>
+                                                                                    <td
+                                                                                        style="text-align: right; font-style: italic; padding-right: 1rem;">
+                                                                                        <%= order.getShippingCourierOfficeName()
+                                                                                            %> (<%=
+                                                                                                order.getShippingCourierOfficeCode()
+                                                                                                %>)
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <% } %>
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+
+                                                        <tr>
+                                                            <td
+                                                                style="font-size: 1.2rem; font-weight: 700; border-bottom: 1px solid <%= cssVars['emails-secondary-button-background'] %>; padding-top: 1rem; padding-bottom: 0.8rem; padding-left: 1rem;">
+                                                                Продукти:
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <table align="center"
+                                                                    style="width: 100%; background-color: white; border-radius: 0.5rem; margin-bottom: 1rem; padding: 0 0.5rem; padding-bottom: 1.5rem; color: <%= cssVars['emails-primary-text-color'] %>;"
+                                                                    class="order-total">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td style="padding: 0.8rem 1.5rem;">
+                                                                                <table style="width: 100%;">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td
+                                                                                                style="text-align: left;">
+                                                                                                Име на
+                                                                                                продукта</td>
+                                                                                            <td
+                                                                                                style="text-align: right;">
+                                                                                                <strong>Сума</strong>
+                                                                                                вкл. ДДС
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <table style="width: 100%;">
+                                                                                    <tbody>
+                                                                                        <!-- Product Iteration  Start -->
+                                                                                        <% for (const orderLineItem of
+                                                                                            order.getOrderLineItems()){
+                                                                                            %>
+                                                                                            <tr>
+                                                                                                <td
+                                                                                                    style="padding: 1rem; border-top: 1px solid <%= cssVars['emails-primary-button-background'] %>; ">
+                                                                                                    <table
+                                                                                                        style="width: 100%;">
+                                                                                                        <tbody>
+                                                                                                            <tr>
+                                                                                                                <td
+                                                                                                                    style="padding: 0 0.5rem;">
+                                                                                                                    <table>
+                                                                                                                        <tbody>
+                                                                                                                            <tr>
+                                                                                                                                <td
+                                                                                                                                    style="font-weight: 700; font-size: 1.2rem; line-height: 1.6rem;">
+                                                                                                                                    <%= orderLineItem.getProductName()
+                                                                                                                                        %>
+                                                                                                                                </td>
+                                                                                                                            </tr>
+                                                                                                                            <tr>
+                                                                                                                                <td
+                                                                                                                                    style="padding-top: 0.5rem; font-size: 0.8rem; font-style: italic; color: gray;">
+                                                                                                                                    Артикулен
+                                                                                                                                    номер:
+                                                                                                                                    <%= orderLineItem.getFBStockId()
+                                                                                                                                        %>
+                                                                                                                                </td>
+                                                                                                                            </tr>
+                                                                                                                        </tbody>
+                                                                                                                    </table>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                            <tr>
+                                                                                                                <td
+                                                                                                                    style="padding: 0 0.5rem; padding-top: 1rem; font-size: 1.2rem;">
+                                                                                                                    <table
+                                                                                                                        style="width: 100%;">
+                                                                                                                        <tbody>
+                                                                                                                            <tr>
+                                                                                                                                <td
+                                                                                                                                    style="text-align: left;">
+                                                                                                                                    <%= orderLineItem.getQuantity()
+                                                                                                                                        %>
+                                                                                                                                        x
+                                                                                                                                        <%= orderLineItem.getSinglePriceGross()
+                                                                                                                                            %>
+                                                                                                                                            лв.
+                                                                                                                                </td>
+                                                                                                                                <td
+                                                                                                                                    style="text-align: right;">
+                                                                                                                                    <%= orderLineItem.getTotalPriceGross()
+                                                                                                                                        %>
+                                                                                                                                        лв.
+                                                                                                                                </td>
+                                                                                                                            </tr>
+                                                                                                                        </tbody>
+                                                                                                                    </table>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                        </tbody>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <% } %>
+                                                                                                <!-- Product Iteration  End -->
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td
+                                                                                style="background-color: <%= cssVars['emails-primary-background'] %>; padding: 1rem; color: white;">
+                                                                                <table align="center"
+                                                                                    style="width: 100%; font-size: 1.2rem; padding: 0 0.5rem;">
+                                                                                    <tbody>
+                                                                                        <% if
+                                                                                            (order.getShippingPriceGross()
+                                                                                            !==null) { %>
+                                                                                            <tr>
+                                                                                                <td
+                                                                                                    style="text-align: left;">
+                                                                                                    <strong>Цена за
+                                                                                                        доставка:
+                                                                                                </td>
+                                                                                                <td
+                                                                                                    style="text-align: right;">
+                                                                                                    <strong>
+                                                                                                        <%= order.getShippingPriceGross()
+                                                                                                            %> лв.
+                                                                                                    </strong>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <% } %>
+                                                                                                <tr>
+                                                                                                    <td
+                                                                                                        style="text-align: left; width: 70%;">
+                                                                                                        <strong>Обща
+                                                                                                            цена</strong>
+                                                                                                        вкл.
+                                                                                                        ДДС
+                                                                                                    </td>
+                                                                                                    <td
+                                                                                                        style="text-align: right;">
+                                                                                                        <strong>
+                                                                                                            <%= order.getTotalPriceGross()
+                                                                                                                %> лв.
+                                                                                                        </strong>
+                                                                                                    </td>
+                                                                                                </tr>
+
+                                                                                                <% if
+                                                                                                    (order.getShippingPriceGross()===null)
+                                                                                                    { %>
+                                                                                                    <tr>
+                                                                                                        <td colspa="2"
+                                                                                                            style="font-size: 0.8rem; padding-top: 1rem;">
+                                                                                                            * Цената за
+                                                                                                            доставка се
+                                                                                                            изчислява
+                                                                                                            допълнително
+                                                                                                            от
+                                                                                                            куриера.
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                    <% } %>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+
+
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+
+<!-- ---------------------------------------------------------------- -->
+
+
+<!-- Цветове за майли за ОХ Маркет -->
+<!-- ----------------------------- -->
+
+<!-- 
+    "emails-primary-text-color": "#1D2127",
+    "emails-secondary-text-color": "#4B4B4B",
+    "emails-primary-background": "#EA0950",
+    "emails-secondary-background": "#f4c7d5",
+    "emails-primary-button-background": "#FFDF00",
+    "emails-primary-button-text-color": "white",
+    "emails-secondary-button-background": "#729E3C",
+    "emails-main-background-color": "white",
+    "emails-tertiary-background": "#EEEEEE"
+ -->
